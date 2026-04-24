@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#2d1060">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="淨利表">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>DBG Money</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{
+  --p1:#c084fc;--p2:#818cf8;--p3:#67e8f9;
+  --pp:#f8c8ff;--pd:#2d1060;
+  --g1:#10b981;--g2:#34d399;
+  --r1:#f87171;--r2:#fca5a5;
+  --bg:#0f0a1e;--bg2:#16102a;--bg3:#1e1640;--bg4:#251c4d;
+  --card:rgba(255,255,255,0.04);--card2:rgba(255,255,255,0.07);
+  --border:rgba(196,181,253,0.12);--border2:rgba(196,181,253,0.25);
+  --text:#f0e6ff;--text2:#c4b5fd;--text3:rgba(196,181,253,0.5);
+  --radius:12px;--radius-lg:18px;--radius-xl:24px;
+  --safe-top:env(safe-area-inset-top,0px);
+  --safe-bottom:env(safe-area-inset-bottom,0px);
+  --grad:linear-gradient(135deg,#c084fc,#818cf8,#67e8f9);
+  --grad2:linear-gradient(135deg,#f8c8ff,#c084fc,#818cf8);
+}
+html,body{height:100%;overflow:hidden;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Serif TC',sans-serif;color:var(--text);font-size:15px}
+
+/* ── Global glow bg ── */
+#app{display:flex;flex-direction:column;height:100%;max-width:480px;margin:0 auto;background:var(--bg);position:relative;overflow:hidden}
+#app::before{content:'';position:absolute;top:-120px;left:-80px;width:340px;height:340px;background:radial-gradient(circle,rgba(124,58,237,0.22) 0%,transparent 70%);pointer-events:none;z-index:0}
+#app::after{content:'';position:absolute;bottom:-80px;right:-60px;width:280px;height:280px;background:radial-gradient(circle,rgba(14,165,233,0.18) 0%,transparent 70%);pointer-events:none;z-index:0}
+
+/* ── Login ── */
+#loginScreen{position:fixed;inset:0;z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(160deg,#0f0522 0%,#1a0840 40%,#060d2e 100%);padding:32px 28px;max-width:480px;margin:0 auto}
+#loginScreen .stars{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.star{position:absolute;border-radius:50%;background:white;opacity:0}
+@keyframes twinkle{0%,100%{opacity:0}50%{opacity:0.85}}
+.login-logo{width:112px;height:112px;border-radius:26px;margin-bottom:24px;box-shadow:0 0 40px rgba(192,132,252,0.4)}
+.login-title{font-size:44px;font-weight:700;font-style:italic;font-family:Georgia,serif;background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:2px;margin-bottom:4px}
+.login-sub{font-size:13px;color:rgba(196,181,253,0.6);letter-spacing:5px;font-style:italic;margin-bottom:40px}
+.login-card{background:rgba(255,255,255,0.05);border:0.5px solid rgba(196,181,253,0.2);border-radius:22px;padding:24px 22px;width:100%}
+.login-label{font-size:12px;color:var(--text2);margin-bottom:8px;letter-spacing:1px;font-weight:500}
+.login-input{width:100%;padding:14px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(196,181,253,0.25);border-radius:13px;color:var(--text);font-size:16px;outline:none;-webkit-appearance:none;transition:border-color 0.2s}
+.login-input::placeholder{color:rgba(196,181,253,0.3)}
+.login-input:focus{border-color:rgba(192,132,252,0.6)}
+.login-btn{width:100%;margin-top:14px;padding:15px;border:none;border-radius:13px;background:linear-gradient(135deg,#7c3aed,#2563eb);color:white;font-size:15px;font-weight:600;cursor:pointer;letter-spacing:0.5px;position:relative;overflow:hidden}
+.login-btn::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.15),transparent);pointer-events:none}
+.login-btn:active{opacity:0.85}
+.login-hint{font-size:11px;color:var(--text3);text-align:center;margin-top:12px;line-height:1.7}
+#loginScreen.hide{animation:loginOut 0.45s forwards}
+.login-level-btn{padding:12px 8px;border:0.5px solid rgba(196,181,253,0.2);border-radius:13px;background:rgba(255,255,255,0.04);cursor:pointer;text-align:center;color:#f0e6ff;font-size:13px;font-weight:600;transition:all 0.15s}
+.login-level-btn:active{transform:scale(0.96)}
+.login-level-btn.active{border-color:rgba(192,132,252,0.6);background:rgba(124,58,237,0.2);color:#f8c8ff}
+.login-level-btn .lsub{font-size:10px;color:rgba(196,181,253,0.5);margin-top:3px;font-weight:400}
+.login-level-btn.active .lsub{color:rgba(248,200,255,0.7)}
+@keyframes loginOut{to{opacity:0;transform:scale(1.05)}}
+
+/* ── Topbar ── */
+#topbar{background:linear-gradient(135deg,rgba(45,16,96,0.95),rgba(13,26,74,0.95));padding:14px 18px 12px;padding-top:calc(14px + var(--safe-top));flex-shrink:0;border-bottom:0.5px solid var(--border);position:relative;z-index:10}
+#topbar::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--grad);opacity:0.4}
+#topbar h1{font-size:18px;font-weight:700;font-style:italic;font-family:Georgia,serif;background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:0.5px}
+#topbar .sub{font-size:11px;color:var(--text3);margin-top:2px}
+
+/* ── Content ── */
+#content{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:16px;padding-bottom:calc(16px + var(--safe-bottom));position:relative;z-index:1}
+
+/* ── Navbar ── */
+#navbar{display:flex;background:rgba(15,10,30,0.97);border-top:0.5px solid var(--border);flex-shrink:0;padding-bottom:var(--safe-bottom);position:relative;z-index:10}
+#navbar::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--grad);opacity:0.35}
+.nav-btn{flex:1;padding:10px 2px 8px;display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:none;color:var(--text3);font-size:9px;cursor:pointer;transition:color 0.2s}
+.nav-btn.active{color:var(--p1)}
+.nav-btn svg{width:22px;height:22px}
+.nav-btn.active svg{filter:drop-shadow(0 0 6px rgba(192,132,252,0.7))}
+
+.screen{display:none}.screen.active{display:block}
+
+/* ── Section label ── */
+.section-label{font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:1.2px;margin:20px 0 10px;display:flex;align-items:center;gap:8px}
+.section-label::after{content:'';flex:1;height:0.5px;background:var(--border)}
+
+/* ── Level cards ── */
+.level-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.level-card{padding:16px 12px;border:0.5px solid var(--border);border-radius:var(--radius-lg);background:var(--card);cursor:pointer;transition:all 0.18s;text-align:center;position:relative;overflow:hidden}
+.level-card::before{content:'';position:absolute;inset:0;background:var(--grad);opacity:0;transition:opacity 0.18s}
+.level-card:active{transform:scale(0.96)}
+.level-card.active{border-color:rgba(192,132,252,0.5);background:rgba(124,58,237,0.15)}
+.level-card.active::before{opacity:0.06}
+.level-card .lname{font-size:14px;font-weight:600;color:var(--text);position:relative}
+.level-card.active .lname{background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.level-card .ldesc{font-size:11px;color:var(--text3);margin-top:3px;position:relative}
+.level-card.active .ldesc{color:var(--p1)}
+
+/* ── Type toggle ── */
+.type-toggle{display:flex;background:rgba(255,255,255,0.04);border:0.5px solid var(--border);border-radius:var(--radius);padding:3px;gap:3px;margin-bottom:16px}
+.type-btn{flex:1;padding:9px 8px;border:none;border-radius:9px;font-size:13px;font-weight:500;cursor:pointer;background:none;color:var(--text3);transition:all 0.15s}
+.type-btn.active{background:linear-gradient(135deg,rgba(124,58,237,0.4),rgba(37,99,235,0.4));color:var(--pp);box-shadow:0 0 12px rgba(124,58,237,0.25)}
+
+/* ── Fields ── */
+.field-row{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.field-label{font-size:13px;color:var(--text2);white-space:nowrap;min-width:42px}
+.field-input{flex:1;padding:10px 13px;border:0.5px solid var(--border2);border-radius:var(--radius);background:rgba(255,255,255,0.05);color:var(--text);font-size:14px;outline:none;-webkit-appearance:none;transition:border-color 0.2s}
+.field-input:focus{border-color:rgba(192,132,252,0.5)}
+.field-input option{background:#1e1640;color:#f0e6ff}
+select.field-input{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a78bfa' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:28px}
+
+/* ── Agent box ── */
+#agentBox{background:rgba(124,58,237,0.1);border:0.5px solid rgba(192,132,252,0.25);border-radius:var(--radius-lg);padding:14px;margin-bottom:14px;display:none;overflow:hidden}
+#agentBox .agent-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+#agentBox .agent-fields .field-input{font-size:13px;padding:8px 10px}
+#agentBox .full-width{grid-column:1/-1}
+#agentBox .ab-title{font-size:12px;font-weight:600;color:var(--p1);letter-spacing:0.5px}
+
+/* ── Product list ── */
+.product-item{display:flex;align-items:center;padding:11px 0;border-bottom:0.5px solid var(--border)}
+.product-item:last-child{border-bottom:none}
+.prod-name{flex:1;font-size:14px;color:var(--text)}
+.prod-sub{font-size:11px;color:var(--text3);margin-top:2px}
+.prod-profit{font-size:12px;margin-right:10px;min-width:60px;text-align:right;font-weight:600}
+.prod-profit.pos{color:var(--g2)}.prod-profit.neg{color:var(--r1)}
+.qty-wrap{display:flex;align-items:center}
+.qty-btn{width:32px;height:32px;border:0.5px solid var(--border2);background:rgba(255,255,255,0.05);color:var(--text2);font-size:20px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:300;transition:background 0.15s}
+.qty-btn:first-child{border-radius:9px 0 0 9px}.qty-btn:last-child{border-radius:0 9px 9px 0}
+.qty-btn:active{background:rgba(192,132,252,0.2);color:var(--pp)}
+.qty-val{width:40px;text-align:center;padding:5px 2px;border:0.5px solid var(--border2);border-left:none;border-right:none;font-size:14px;font-weight:600;background:rgba(255,255,255,0.03);color:var(--text);-webkit-appearance:none;outline:none}
+
+/* ── Summary bar ── */
+.summary-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-radius:var(--radius-lg);padding:14px 12px;margin:14px 0;border:0.5px solid var(--border);background:var(--card)}
+.summary-bar::before{display:none}
+.metric-label{font-size:10px;color:var(--text3);margin-bottom:4px;letter-spacing:0.5px}
+.metric-val{font-size:18px;font-weight:700;color:var(--text)}
+.metric-val.green{background:linear-gradient(135deg,var(--g1),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.metric-val.red{color:var(--r1)}
+.metric-val.grad{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* ── Buttons ── */
+.btn-primary{width:100%;padding:15px;background:linear-gradient(135deg,#7c3aed,#2563eb);color:white;border:none;border-radius:var(--radius-lg);font-size:15px;font-weight:600;cursor:pointer;margin-top:4px;position:relative;overflow:hidden;letter-spacing:0.3px}
+.btn-primary::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.12),transparent);pointer-events:none}
+.btn-primary:active{opacity:0.85;transform:scale(0.99)}
+.btn-secondary{padding:9px 14px;background:rgba(255,255,255,0.05);color:var(--text2);border:0.5px solid var(--border2);border-radius:var(--radius-lg);font-size:13px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:6px}
+.btn-secondary:active{background:rgba(192,132,252,0.1);color:var(--pp)}
+
+/* ── Record cards ── */
+.record-card{background:var(--card);border:0.5px solid var(--border);border-radius:var(--radius-lg);margin-bottom:10px;overflow:hidden}
+.record-header{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(255,255,255,0.03);border-bottom:0.5px solid var(--border)}
+.record-date{font-size:13px;font-weight:600;color:var(--text2)}
+.record-meta{display:flex;align-items:center;gap:6px}
+.badge{display:inline-block;padding:3px 9px;border-radius:7px;font-size:11px;font-weight:600;letter-spacing:0.3px}
+.badge-retail{background:rgba(16,185,129,0.15);color:var(--g2);border:0.5px solid rgba(52,211,153,0.3)}
+.badge-agent{background:rgba(124,58,237,0.15);color:var(--p1);border:0.5px solid rgba(192,132,252,0.3)}
+.record-agent{padding:8px 14px;border-bottom:0.5px solid var(--border);font-size:12px;color:var(--text3)}
+.record-agent .ra-name{font-weight:600;color:var(--text2)}
+.record-items{padding:8px 14px}
+.record-item-row{display:flex;justify-content:space-between;padding:5px 0;font-size:13px;border-bottom:0.5px solid var(--border);color:var(--text2)}
+.record-item-row:last-child{border-bottom:none}
+.record-totals{display:grid;grid-template-columns:repeat(3,1fr);padding:10px 14px;background:rgba(255,255,255,0.02);border-top:0.5px solid var(--border)}
+.rt-item{text-align:center}
+.rt-label{font-size:10px;color:var(--text3);margin-bottom:2px}
+.rt-val{font-size:13px;font-weight:700;color:var(--text2)}
+.rt-val.green{color:var(--g2)}.rt-val.red{color:var(--r1)}
+.del-btn{background:none;border:none;color:rgba(248,113,113,0.6);font-size:12px;padding:4px 8px;cursor:pointer}
+
+/* ── Empty state ── */
+.empty-state{text-align:center;padding:52px 20px;color:var(--text3)}
+.empty-state svg{width:48px;height:48px;margin-bottom:14px;opacity:0.25}
+.empty-state p{font-size:14px;line-height:1.7}
+
+/* ── Settings ── */
+.danger-btn{border:none;padding:12px 18px;border-radius:var(--radius);font-size:13px;font-weight:500;cursor:pointer;width:100%;margin-top:10px;letter-spacing:0.3px}
+.danger-red{color:var(--r1);background:rgba(248,113,113,0.1);border:0.5px solid rgba(248,113,113,0.25)}
+.danger-purple{color:var(--p1);background:rgba(124,58,237,0.1);border:0.5px solid rgba(192,132,252,0.2)}
+
+/* ── Seg controls ── */
+.seg{display:flex;background:rgba(255,255,255,0.04);border:0.5px solid var(--border);border-radius:var(--radius);padding:3px;gap:2px;margin-bottom:10px}
+.seg-btn{flex:1;padding:7px 4px;border:none;border-radius:9px;font-size:12px;font-weight:500;cursor:pointer;background:none;color:var(--text3);transition:all 0.15s}
+.seg-btn.active{background:linear-gradient(135deg,rgba(124,58,237,0.35),rgba(37,99,235,0.35));color:var(--pp);box-shadow:0 0 8px rgba(124,58,237,0.2)}
+
+/* ── Stats summary ── */
+.stat-summary{display:grid;grid-template-columns:1fr 1fr;gap:8px;border-radius:var(--radius-lg);padding:12px;margin-bottom:14px;border:0.5px solid var(--border);background:var(--card)}
+.stat-summary .metric-val{font-size:15px}
+
+/* ── Product stat items ── */
+.pitem{display:flex;align-items:center;padding:11px 13px;border:0.5px solid var(--border);border-radius:var(--radius-lg);margin-bottom:8px;background:var(--card);gap:10px;position:relative;overflow:hidden}
+.pitem::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--grad)}
+.prank{font-size:14px;font-weight:700;min-width:22px;text-align:center}
+.prank.r1{background:linear-gradient(135deg,#f59e0b,#fcd34d);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 4px rgba(251,191,36,0.4))}
+.prank.r2{color:#9ca3af}
+.prank.r3{color:#a16207}
+.prank.rn{color:var(--text3)}
+.pinfo{flex:1;min-width:0}
+.pname{font-size:14px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pdetail{font-size:11px;color:var(--text3);margin-top:2px}
+.bar-wrap{height:3px;background:rgba(255,255,255,0.06);border-radius:4px;margin-top:6px;overflow:hidden}
+.bar-qty{height:100%;border-radius:4px;background:linear-gradient(90deg,#818cf8,#38bdf8)}
+.bar-profit{height:100%;border-radius:4px;background:linear-gradient(90deg,#10b981,#34d399)}
+.pnums{text-align:right;flex-shrink:0}
+.pqty{font-size:17px;font-weight:700;color:var(--text)}
+.pqty-u{font-size:10px;color:var(--text3)}
+.pprofit{font-size:12px;font-weight:600;margin-top:2px}
+.pprofit.pos{color:var(--g2)}.pprofit.neg{color:var(--r1)}
+
+/* ── Month row ── */
+.month-row{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.month-row select{flex:1}
+
+/* ── Custom sales & extra costs ── */
+.extra-section{background:rgba(255,255,255,0.03);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:14px;margin-bottom:14px}
+.extra-title{font-size:12px;font-weight:600;color:var(--p1);letter-spacing:0.5px;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between}
+.add-row-btn{background:rgba(124,58,237,0.15);border:0.5px solid rgba(192,132,252,0.3);color:var(--p1);border-radius:8px;padding:4px 10px;font-size:12px;cursor:pointer}
+.add-row-btn:active{opacity:0.75}
+.custom-row{display:grid;grid-template-columns:1fr 80px 80px 32px;gap:6px;align-items:center;margin-bottom:6px}
+.custom-row:last-child{margin-bottom:0}
+.custom-input{padding:7px 9px;border:0.5px solid var(--border2);border-radius:9px;background:rgba(255,255,255,0.05);color:var(--text);font-size:13px;outline:none;width:100%;-webkit-appearance:none}
+.custom-input::placeholder{color:var(--text3)}
+.custom-input:focus{border-color:rgba(192,132,252,0.5)}
+.rm-btn{background:none;border:none;color:rgba(248,113,113,0.5);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px}
+.rm-btn:active{background:rgba(248,113,113,0.1)}
+.cost-row{display:grid;grid-template-columns:1fr 100px 32px;gap:6px;align-items:center;margin-bottom:6px}
+.cost-row:last-child{margin-bottom:0}
+.cost-badge{display:inline-block;padding:2px 8px;border-radius:6px;font-size:11px;font-weight:600;background:rgba(248,113,113,0.12);color:var(--r1);border:0.5px solid rgba(248,113,113,0.25)}
+
+/* ── About card ── */
+.about-card{background:var(--card);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:16px;font-size:13px;color:var(--text3);line-height:1.8}
+.about-card .av{color:var(--p1);font-weight:600}
+
+/* ── Settings list ── */
+.settings-list{background:var(--card);border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:10px}
+.settings-item{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;transition:background 0.15s}
+.settings-item:last-child{border-bottom:none}
+.settings-item:active{background:rgba(255,255,255,0.05)}
+.si-left{display:flex;align-items:center;gap:12px}
+.si-icon{width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.si-label{font-size:14px;color:var(--text);font-weight:500}
+.si-desc{font-size:11px;color:var(--text3);margin-top:2px}
+.si-arrow{font-size:12px;color:var(--text3)}
+.settings-panel{display:none;padding:14px 16px;border-top:0.5px solid var(--border);background:rgba(255,255,255,0.02)}
+.settings-panel.open{display:block}
+
+/* ── Team leader ── */
+.team-login-card{background:rgba(124,58,237,0.08);border:0.5px solid rgba(192,132,252,0.25);border-radius:var(--radius-lg);padding:18px;margin-bottom:14px}
+.team-member-card{background:var(--card);border:0.5px solid var(--border);border-radius:var(--radius-lg);margin-bottom:10px;overflow:hidden}
+.team-member-header{display:flex;justify-content:space-between;align-items:center;padding:11px 14px;background:rgba(124,58,237,0.08);border-bottom:0.5px solid var(--border);cursor:pointer}
+.tmh-left{flex:1}
+.team-member-name{font-size:14px;font-weight:600;color:var(--text)}
+.team-member-meta{font-size:11px;color:var(--text3);margin-top:2px}
+.team-summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:12px 14px;border-bottom:0.5px solid var(--border)}
+.tsm{text-align:center}
+.tsm-label{font-size:10px;color:var(--text3);margin-bottom:2px}
+.tsm-val{font-size:14px;font-weight:700}
+.team-detail{display:none;padding:8px 14px}
+.team-detail.open{display:block}
+.team-rec-row{display:flex;justify-content:space-between;padding:5px 0;font-size:12px;border-bottom:0.5px solid var(--border);color:var(--text2)}
+.team-rec-row:last-child{border-bottom:none}
+.team-overall{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;background:rgba(124,58,237,0.08);border:0.5px solid rgba(192,132,252,0.2);border-radius:var(--radius-lg);padding:14px 12px;margin-bottom:14px}
+.submit-btn{width:100%;padding:13px;background:linear-gradient(135deg,rgba(124,58,237,0.5),rgba(37,99,235,0.5));color:var(--pp);border:0.5px solid rgba(192,132,252,0.3);border-radius:var(--radius-lg);font-size:14px;font-weight:600;cursor:pointer;letter-spacing:0.3px;margin-top:4px}
+.submit-btn:active{opacity:0.8}
+.del-member-btn{background:none;border:none;color:rgba(248,113,113,0.5);font-size:11px;padding:3px 8px;cursor:pointer}
+.team-chevron{font-size:12px;color:var(--text3);transition:transform 0.2s;margin-left:8px}
+.team-chevron.open{transform:rotate(180deg)}
+</style>
+</head>
+<body>
+
+<!-- Login -->
+<div id="loginScreen">
+  <div class="stars" id="starsContainer"></div>
+  <img class="login-logo" src="data:image/png;base64,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" alt="DBG">
+  <div class="login-title">DBG</div>
+  <div class="login-sub">專屬淨利表</div>
+  <div class="login-card" id="loginStep1">
+    <div class="login-label">請輸入您的姓名</div>
+    <input class="login-input" type="text" id="loginName" placeholder="輸入姓名" maxlength="20" autocomplete="name">
+    <div class="login-label" style="margin-top:14px;margin-bottom:8px">選擇我的級別</div>
+    <div id="loginLevelGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px"></div>
+    <div id="loginErrMsg" style="font-size:11px;color:#f87171;text-align:center;margin-bottom:8px;min-height:16px"></div>
+    <button class="login-btn" onclick="doLogin()">✦ 進入系統</button>
+    <div class="login-hint">下次開啟自動登入</div>
+  </div>
+</div>
+
+<div id="app">
+  <div id="topbar">
+    <h1>✦ DBG Money</h1>
+    <div class="sub" id="topSub">請先選擇您的級別</div>
+  </div>
+
+  <div id="content">
+
+    <!-- 設定 -->
+    <div class="screen active" id="screenSettings">
+      <div class="section-label">設定</div>
+      <div class="settings-list">
+
+        <!-- 清除銷售記錄 -->
+        <div class="settings-item" onclick="togglePanel('panelClear')">
+          <div class="si-left">
+            <div class="si-icon" style="background:rgba(248,113,113,0.12)">🗑</div>
+            <div>
+              <div class="si-label">清除所有銷售記錄</div>
+              <div class="si-desc">刪除本機所有記錄，無法復原</div>
+            </div>
+          </div>
+          <span class="si-arrow" id="arrowClear">›</span>
+        </div>
+        <div class="settings-panel" id="panelClear">
+          <button class="danger-btn danger-red" style="margin-top:0" onclick="clearAllData()">確認清除所有記錄</button>
+        </div>
+
+        <!-- 登出 -->
+        <div class="settings-item" onclick="logout()">
+          <div class="si-left">
+            <div class="si-icon" style="background:rgba(196,181,253,0.1)">👤</div>
+            <div>
+              <div class="si-label">登出・切換使用者</div>
+              <div class="si-desc">返回登入畫面重新選擇級別</div>
+            </div>
+          </div>
+          <span class="si-arrow">›</span>
+        </div>
+
+      </div>
+
+      <div id="levelGrid" style="display:none"></div>
+      <div class="section-label">關於</div>
+      <div class="about-card">
+        <span class="av">DBG 專屬淨利表 v1.2</span><br>
+        資料儲存於本機裝置，清除瀏覽器資料時會一併刪除。建議定期匯出 CSV 備份。
+      </div>
+    </div>
+
+    <!-- 每日銷售 -->
+    <div class="screen" id="screenDaily">
+      <div class="field-row">
+        <div class="field-label">日期</div>
+        <input type="date" id="saleDate" class="field-input">
+      </div>
+      <div class="type-toggle">
+        <button class="type-btn active" id="retTab" onclick="switchType('retail')">零售</button>
+        <button class="type-btn" id="agentTab" onclick="switchType('agent')">代理銷售</button>
+      </div>
+      <div id="agentBox">
+        <div class="ab-title">✦ 代理資訊</div>
+        <div class="agent-fields">
+          <div>
+            <div style="font-size:11px;color:var(--text3);margin-bottom:4px">叫貨級別</div>
+            <select id="agentLevelSel" class="field-input" style="padding:7px 28px 7px 10px;font-size:13px" onchange="renderProducts()"></select>
+          </div>
+          <div>
+            <div style="font-size:11px;color:var(--text3);margin-bottom:4px">姓名</div>
+            <input type="text" id="agentName" class="field-input" placeholder="代理姓名" style="padding:8px 10px;font-size:13px">
+          </div>
+          <div class="full-width">
+            <div style="font-size:11px;color:var(--text3);margin-bottom:4px">備註</div>
+            <input type="text" id="agentRemark" class="field-input" placeholder="選填備註" style="padding:8px 10px;font-size:13px">
+          </div>
+        </div>
+      </div>
+      <div id="productList"></div>
+
+      <!-- 其他銷售 -->
+      <div class="extra-section">
+        <div class="extra-title">
+          <span>✦ 其他銷售</span>
+          <button class="add-row-btn" onclick="addCustomSale()">＋ 新增</button>
+        </div>
+        <div id="customSaleList"></div>
+        <div style="font-size:11px;color:var(--text3);margin-top:6px;line-height:1.6">自訂品名・售價・成本，淨利自動計算</div>
+      </div>
+
+      <!-- 其他成本 -->
+      <div class="extra-section">
+        <div class="extra-title">
+          <span>✦ 其他成本</span>
+          <button class="add-row-btn" onclick="addExtraCost()">＋ 新增</button>
+        </div>
+        <div id="extraCostList"></div>
+        <div style="font-size:11px;color:var(--text3);margin-top:6px;line-height:1.6">運費・手續費・其他支出，直接從淨利扣除</div>
+      </div>
+
+      <div class="summary-bar">
+        <div><div class="metric-label">總營業額</div><div class="metric-val grad" id="dRevenue">$0</div></div>
+        <div><div class="metric-label">總成本</div><div class="metric-val" id="dCost">$0</div></div>
+        <div><div class="metric-label">總淨利</div><div class="metric-val green" id="dProfit">$0</div></div>
+      </div>
+      <button class="btn-primary" onclick="saveRecord()">✦ 儲存記錄</button>
+    </div>
+
+    <!-- 月度獲利 -->
+    <div class="screen" id="screenMonthly">
+      <div class="month-row">
+        <div class="field-label">月份</div>
+        <select id="monthSel" class="field-input" onchange="renderMonthly()"></select>
+      </div>
+      <div class="summary-bar">
+        <div><div class="metric-label">月營業額</div><div class="metric-val grad" id="mRevenue">$0</div></div>
+        <div><div class="metric-label">月成本</div><div class="metric-val" id="mCost">$0</div></div>
+        <div><div class="metric-label">月淨利</div><div class="metric-val green" id="mProfit">$0</div></div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+        <select id="csvScope" style="border:0.5px solid var(--border2);border-radius:10px;padding:7px 26px 7px 10px;font-size:12px;background:rgba(255,255,255,0.05);color:var(--text2);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23a78bfa' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 8px center;-webkit-appearance:none;outline:none">
+          <option value="month">本月記錄</option>
+          <option value="all">全部記錄</option>
+        </select>
+        <button class="btn-secondary" onclick="exportCSV()">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 10v2a1 1 0 001 1h8a1 1 0 001-1v-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          匯出 CSV
+        </button>
+      </div>
+      <div id="monthRecords"></div>
+    </div>
+
+    <!-- 產品銷量 -->
+    <div class="screen" id="screenStats">
+      <div class="field-row" style="margin-bottom:10px">
+        <div class="field-label">月份</div>
+        <select id="statMonthSel" class="field-input" onchange="renderStats()"></select>
+      </div>
+      <div class="seg" id="filterSeg">
+        <button class="seg-btn active" onclick="setFilter('all')">全部</button>
+        <button class="seg-btn" onclick="setFilter('retail')">零售</button>
+        <button class="seg-btn" onclick="setFilter('agent')">代理</button>
+      </div>
+      <div class="seg" id="sortSeg">
+        <button class="seg-btn active" onclick="setSort('qty')">依銷量排序</button>
+        <button class="seg-btn" onclick="setSort('profit')">依獲利排序</button>
+      </div>
+      <div class="stat-summary">
+        <div><div class="metric-label">銷售品項</div><div class="metric-val" id="stItems">0</div></div>
+        <div><div class="metric-label">總銷售件數</div><div class="metric-val" id="stQty">0</div></div>
+        <div><div class="metric-label">最暢銷產品</div><div class="metric-val" id="stTop" style="font-size:13px;line-height:1.4">—</div></div>
+        <div><div class="metric-label">總淨利</div><div class="metric-val green" id="stProfit">$0</div></div>
+      </div>
+      <div id="statList"></div>
+    </div>
+
+
+  </div>
+
+  <div id="navbar">
+    <button class="nav-btn" id="nav-settings" onclick="showScreen('settings')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+      設定
+    </button>
+    <button class="nav-btn" id="nav-daily" onclick="showScreen('daily')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h2m2 0h4M8 18h2"/></svg>
+      每日銷售
+    </button>
+    <button class="nav-btn" id="nav-monthly" onclick="showScreen('monthly')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-5 4 3 4-6"/></svg>
+      月度獲利
+    </button>
+    <button class="nav-btn" id="nav-stats" onclick="showScreen('stats')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>
+      產品銷量
+    </button>
+
+  </div>
+</div>
+
+<script>
+const PRODUCTS=[
+  {name:'小綠',retail:1480},{name:'小粉',retail:880},{name:'小粉體驗包',retail:240},
+  {name:'纖飄錠',retail:1480},{name:'紫纖飲',retail:990},{name:'纖酵宿',retail:990},
+  {name:'纖酵素體驗包',retail:190},{name:'可可',retail:990},{name:'奶茶',retail:990},
+  {name:'水光錠',retail:1680},{name:'面膜精裝',retail:700},{name:'益生菌',retail:1280},
+  {name:'玻尿酸',retail:990},{name:'婕肌零',retail:990},{name:'婕肌零體驗包',retail:40},
+  {name:'雪聚露',retail:1280},{name:'葉黃素EX',retail:990},{name:'葉黃素果凍',retail:990},
+  {name:'法樂蓬',retail:1280},{name:'法樂蓬體驗包',retail:30},{name:'頭皮水',retail:1080},
+  {name:'身體油',retail:1280},{name:'護手霜',retail:680},{name:'酒國',retail:680},
+  {name:'固樂纖',retail:1680},{name:'正冠茶',retail:990},
+];
+const COSTS={
+  '皇家':[700,430,120,700,440,440,75,440,440,740,360,620,440,440,15,620,440,320,620,12,500,620,320,320,740,440],
+  '一級':[790,470,133,790,510,510,89,510,510,830,400,690,510,510,17,690,510,365,690,14,570,690,365,365,830,510],
+  '二級':[880,520,146,880,580,580,103,580,580,920,450,770,580,560,20,770,640,410,770,17,640,770,410,410,920,580],
+  '三級輔導督導':[955,560,158,955,635,635,113,635,635,1040,485,830,635,635,24,830,695,440,830,20,695,830,440,440,1040,635],
+  '三級零售':[990,580,164,990,660,660,117,660,660,1080,500,860,660,660,25,860,720,455,860,21,720,860,455,455,1080,660],
+  '體驗代理':[1160,660,190,1160,780,780,145,780,780,1260,550,990,780,780,30,990,840,530,990,24,840,990,530,530,1260,780],
+};
+const LEVELS=['皇家','一級','二級','三級輔導督導','三級零售'];
+const ALL_LEVELS=['皇家','一級','二級','三級輔導督導','三級零售','體驗代理'];
+const LEVEL_LABELS={'皇家':'皇家版','一級':'一級版','二級':'二級版','三級輔導督導':'三級輔導督導版','三級零售':'三級零售版'};
+
+let myLevel=localStorage.getItem('myLevel')||null;
+let saleType='retail';
+let records=JSON.parse(localStorage.getItem('profitRecords')||'[]');
+let qtys=new Array(PRODUCTS.length).fill(0);
+let statSort='qty',statFilter='all';
+let customSales=[];   // [{name,salePrice,myCost}]
+let extraCosts=[];    // [{name,amount}]
+
+function saveLocal(){localStorage.setItem('profitRecords',JSON.stringify(records));}
+function ensureIds(){
+  let changed=false;
+  records.forEach(r=>{if(!r.id){r.id=Date.now()+'_'+Math.random().toString(36).slice(2,7);changed=true;}});
+  if(changed)saveLocal();
+}
+
+/* ── Custom sales ── */
+function addCustomSale(){
+  const id=Date.now();
+  customSales.push({id,name:'',salePrice:0,myCost:0});
+  renderCustomSales();
+}
+function removeCustomSale(id){
+  customSales=customSales.filter(r=>r.id!==id);
+  renderCustomSales();updateSummary();
+}
+function renderCustomSales(){
+  const el=document.getElementById('customSaleList');
+  if(!customSales.length){el.innerHTML='';return;}
+  el.innerHTML=customSales.map(r=>`
+    <div class="custom-row">
+      <input class="custom-input" placeholder="品名" value="${r.name}" oninput="updateCustomSale(${r.id},'name',this.value)">
+      <input class="custom-input" type="number" placeholder="售價" value="${r.salePrice||''}" oninput="updateCustomSale(${r.id},'salePrice',this.value)">
+      <input class="custom-input" type="number" placeholder="成本" value="${r.myCost||''}" oninput="updateCustomSale(${r.id},'myCost',this.value)">
+      <button class="rm-btn" onclick="removeCustomSale(${r.id})">×</button>
+    </div>`).join('');
+}
+function updateCustomSale(id,field,val){
+  const r=customSales.find(x=>x.id===id);
+  if(!r)return;
+  r[field]=field==='name'?val:(parseFloat(val)||0);
+  updateSummary();
+}
+
+/* ── Extra costs ── */
+function addExtraCost(){
+  const id=Date.now();
+  extraCosts.push({id,name:'',amount:0});
+  renderExtraCosts();
+}
+function removeExtraCost(id){
+  extraCosts=extraCosts.filter(r=>r.id!==id);
+  renderExtraCosts();updateSummary();
+}
+function renderExtraCosts(){
+  const el=document.getElementById('extraCostList');
+  if(!extraCosts.length){el.innerHTML='';return;}
+  el.innerHTML=extraCosts.map(r=>`
+    <div class="cost-row">
+      <input class="custom-input" placeholder="項目（如：運費）" value="${r.name}" oninput="updateExtraCost(${r.id},'name',this.value)">
+      <input class="custom-input" type="number" placeholder="金額" value="${r.amount||''}" oninput="updateExtraCost(${r.id},'amount',this.value)">
+      <button class="rm-btn" onclick="removeExtraCost(${r.id})">×</button>
+    </div>`).join('');
+}
+function updateExtraCost(id,field,val){
+  const r=extraCosts.find(x=>x.id===id);
+  if(!r)return;
+  r[field]=field==='name'?val:(parseFloat(val)||0);
+  updateSummary();
+}
+
+
+/* ── Team leader ── */
+const TEAM_PW_KEY='dbg_team_pw';
+const TEAM_DATA_KEY='dbg_team_submissions';
+let teamLoggedIn=false;
+let cloudTeamData={};
+
+function getTeamPw(){return localStorage.getItem(TEAM_PW_KEY)||'DBG888';}
+function getTeamData(){return JSON.parse(localStorage.getItem(TEAM_DATA_KEY)||'{}');}
+function saveTeamData(d){localStorage.setItem(TEAM_DATA_KEY,JSON.stringify(d));}
+
+function showScreen(s){
+  document.querySelectorAll('.screen').forEach(el=>el.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(el=>el.classList.remove('active'));
+  document.getElementById('screen'+s.charAt(0).toUpperCase()+s.slice(1)).classList.add('active');
+  document.getElementById('nav-'+s).classList.add('active');
+  if(s==='monthly'){initMonthSelect();renderMonthly();}
+  if(s==='stats'){initStatMonthSel();renderStats();}
+
+}
+
+
+function initTeamScreen(){
+  initSubmitMonthSel();
+  if(teamLoggedIn){
+    document.getElementById('teamLockedView').style.display='none';
+    document.getElementById('teamDashboard').style.display='block';
+    initTeamMonthSel();renderTeamDashboard();
+  } else {
+    document.getElementById('teamLockedView').style.display='block';
+    document.getElementById('teamDashboard').style.display='none';
+  }
+}
+
+function teamLogin(){
+  const pw=document.getElementById('teamPwInput').value.trim();
+  const errEl=document.getElementById('teamLoginErr');
+  if(!pw){errEl.textContent='請輸入密碼';return;}
+
+  // 取得設定的密碼（建立團隊時存的）
+  const saved=localStorage.getItem('dbg_team_pw')||'';
+
+  // 沒設定過密碼：第一次輸入任何密碼直接進入並儲存
+  if(!saved){
+    localStorage.setItem('dbg_team_pw',pw);
+    const el=document.getElementById('curPwShow');
+    if(el)el.textContent=pw;
+  } else if(pw!==saved){
+    // 有設定密碼但不符合
+    document.getElementById('teamPwInput').style.borderColor='rgba(248,113,113,0.7)';
+    errEl.textContent='密碼錯誤，請重新輸入';
+    return;
+  }
+
+  // 密碼正確，進入
+  document.getElementById('teamPwInput').style.borderColor='';
+  errEl.textContent='';
+  teamLoggedIn=true;
+  document.getElementById('teamLockedView').style.display='none';
+  document.getElementById('teamDashboard').style.display='block';
+  document.getElementById('teamMemberList').innerHTML='<div style="text-align:center;padding:20px;color:var(--text3);font-size:13px">載入中…</div>';
+  initTeamMonthSel().then(()=>renderTeamDashboard());
+}
+function teamLogout(){
+  teamLoggedIn=false;
+  document.getElementById('teamPwInput').value='';
+  document.getElementById('teamLockedView').style.display='block';
+  document.getElementById('teamDashboard').style.display='none';
+}
+async function refreshTeam(){
+  document.getElementById('teamMemberList').innerHTML='<div style="text-align:center;padding:20px;color:var(--text3);font-size:13px">載入中…</div>';
+  await initTeamMonthSel();
+  renderTeamDashboard();
+}
+
+function initSubmitMonthSel(){
+  const months=[...new Set(records.filter(r=>!myLevel||r.level===myLevel).map(r=>r.date.slice(0,7)))].sort().reverse();
+  const sel=document.getElementById('submitMonthSel');sel.innerHTML='';
+  if(!months.length){const o=document.createElement('option');o.textContent='無記錄';sel.appendChild(o);return;}
+  months.forEach(m=>{const o=document.createElement('option');o.value=m;o.textContent=m;sel.appendChild(o);});
+}
+
+
+
+async function initTeamMonthSel(){
+  const teamCode=getBaseTeamCode();
+  if(!teamCode)return;
+  const data=await cloudGet(teamCode);
+  cloudTeamData={};
+  if(data&&data.members){
+    Object.entries(data.members).forEach(([k,v])=>{cloudTeamData[k]=v;});
+  }
+  const allMonths=new Set(Object.values(cloudTeamData).map(d=>d.month).filter(Boolean));
+  const months=[...allMonths].sort().reverse();
+  const sel=document.getElementById('teamMonthSel');const cur=sel.value;sel.innerHTML='';
+  const ao=document.createElement('option');ao.value='all';ao.textContent='全部月份';sel.appendChild(ao);
+  months.forEach(m=>{const o=document.createElement('option');o.value=m;o.textContent=m;sel.appendChild(o);});
+  if(cur&&(cur==='all'||months.includes(cur)))sel.value=cur;
+}
+
+function renderTeamDashboard(){
+  const selMonth=document.getElementById('teamMonthSel').value;
+  const members=Object.values(cloudTeamData||{});
+  let totalProfit=0;
+  let html='';
+
+  // 按月分組 → 再按成員
+  const byMonth={};
+  members.forEach(d=>{
+    if(selMonth!=='all'&&d.month!==selMonth)return;
+    const mo=d.month||'未知月份';
+    if(!byMonth[mo])byMonth[mo]={};
+    const k=d.name;
+    const profit=(d.records||[]).reduce((s,r)=>s+(r.profit||0),0);
+    if(!byMonth[mo][k]||byMonth[mo][k].profit<profit){
+      byMonth[mo][k]={name:d.name,level:d.level||'',profit};
+    }
+  });
+
+  const sortedMonths=Object.keys(byMonth).sort().reverse();
+
+  if(!sortedMonths.length){
+    html='<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg><p>尚無成員資料</p></div>';
+  } else {
+    sortedMonths.forEach(mo=>{
+      const mMembers=Object.values(byMonth[mo]).sort((a,b)=>b.profit-a.profit);
+      const moTotal=mMembers.reduce((s,m)=>s+m.profit,0);
+      totalProfit+=moTotal;
+
+      let rows='';
+      mMembers.forEach((m,i)=>{
+        const pc=m.profit>=0?'var(--g2)':'var(--r1)';
+        const rank=i===0?'🥇':i===1?'🥈':i===2?'🥉':''+(i+1)+'.';
+        rows+=`<div style="display:flex;align-items:center;justify-content:space-between;padding:11px 16px;border-bottom:0.5px solid var(--border)">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="font-size:15px;min-width:24px">${rank}</span>
+            <div>
+              <div style="font-size:14px;font-weight:600;color:var(--text)">${m.name}</div>
+              <div style="font-size:11px;color:var(--text3)">${m.level}</div>
+            </div>
+          </div>
+          <div style="font-size:16px;font-weight:700;color:${pc}">${m.profit>=0?'+':''}$${m.profit.toLocaleString()}</div>
+        </div>`;
+      });
+
+      const tc=moTotal>=0?'var(--g2)':'var(--r1)';
+      html+=`<div style="margin-bottom:14px">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 16px;background:rgba(124,58,237,0.12);border-radius:var(--radius-lg) var(--radius-lg) 0 0;border:0.5px solid var(--border)">
+          <span style="font-size:13px;font-weight:600;color:var(--p1)">✦ ${mo}</span>
+          <span style="font-size:13px;font-weight:700;color:${tc}">月總計 ${moTotal>=0?'+':''}$${moTotal.toLocaleString()}</span>
+        </div>
+        <div style="background:var(--card);border:0.5px solid var(--border);border-top:none;border-radius:0 0 var(--radius-lg) var(--radius-lg);overflow:hidden">
+          ${rows}
+        </div>
+      </div>`;
+    });
+  }
+
+  document.getElementById('toMembers').textContent=Object.keys(byMonth[sortedMonths[0]]||{}).length||0;
+  document.getElementById('toRev').textContent='—';
+  const tp=document.getElementById('toProfit');tp.textContent='$'+totalProfit.toLocaleString();tp.className='metric-val'+(totalProfit>=0?' green':' red');
+  document.getElementById('teamMemberList').innerHTML=html;
+}
+
+function toggleMember(uid){
+  const d=document.getElementById('detail_'+uid);
+  const c=document.getElementById('chev_'+uid);
+  if(d.classList.contains('open')){d.classList.remove('open');c.classList.remove('open');}
+  else{d.classList.add('open');c.classList.add('open');}
+}
+function deleteMember(uid){
+  if(!confirm('確定移除此成員的所有提交資料？'))return;
+  const teamData=getTeamData();
+  delete teamData[uid];saveTeamData(teamData);
+  initTeamMonthSel();renderTeamDashboard();
+}
+function clearTeamData(){
+  if(!confirm('確定清除所有成員提交資料？此動作無法復原。'))return;
+  localStorage.removeItem(TEAM_DATA_KEY);initTeamMonthSel();renderTeamDashboard();
+}
+
+
+function initLevels(){
+  const g=document.getElementById('levelGrid');g.innerHTML='';
+  LEVELS.forEach(l=>{
+    const d=document.createElement('div');
+    d.className='level-card'+(myLevel===l?' active':'');
+    d.innerHTML=`<div class="lname">${LEVEL_LABELS[l]}</div><div class="ldesc">${l}</div>`;
+    d.onclick=()=>selectLevel(l);g.appendChild(d);
+  });
+}
+function selectLevel(l){
+  myLevel=l;localStorage.setItem('myLevel',l);
+  const name=localStorage.getItem('userName')||'';
+  const _dn2=name&&name.includes('@')?name.split('@')[0]:name;
+  document.getElementById('topSub').textContent='✦ '+LEVEL_LABELS[l]+(_dn2?' · '+_dn2:'');
+  initLevels();buildAgentLevelOptions();renderProducts();
+}
+function buildAgentLevelOptions(){
+  if(!myLevel)return;
+  const idx=ALL_LEVELS.indexOf(myLevel);
+  const sel=document.getElementById('agentLevelSel');sel.innerHTML='';
+  const sub=ALL_LEVELS.slice(idx+1);
+  sub.forEach(l=>{const o=document.createElement('option');o.value=l;o.textContent=l;sel.appendChild(o);});
+  if(!sub.length){const o=document.createElement('option');o.value='';o.textContent='無下級';sel.appendChild(o);}
+}
+function switchType(t){
+  saleType=t;
+  document.getElementById('retTab').className='type-btn'+(t==='retail'?' active':'');
+  document.getElementById('agentTab').className='type-btn'+(t==='agent'?' active':'');
+  const box=document.getElementById('agentBox');
+  box.style.display=t==='agent'?'block':'none';
+  renderProducts();
+  // Scroll daily content to top so layout shift doesn't feel jumpy
+  const content=document.getElementById('content');
+  if(content)content.scrollTop=0;
+}
+function renderProducts(){
+  if(!myLevel)return;
+  const agentLevel=document.getElementById('agentLevelSel').value;
+  const list=document.getElementById('productList');list.innerHTML='';
+  PRODUCTS.forEach((p,i)=>{
+    const myCost=COSTS[myLevel]?.[i]??0;
+    const salePrice=saleType==='retail'?p.retail:(COSTS[agentLevel]?.[i]??0);
+    const profitPer=salePrice-myCost;
+    const div=document.createElement('div');div.className='product-item';
+    div.innerHTML=`<div style="flex:1;min-width:0">
+        <div class="prod-name">${p.name}</div>
+        <div class="prod-sub">${saleType==='retail'?'售 $'+p.retail.toLocaleString():'叫貨價'} · 本 $${myCost.toLocaleString()}</div>
+      </div>
+      <div class="prod-profit ${profitPer>=0?'pos':'neg'}">淨 $${profitPer.toLocaleString()}</div>
+      <div class="qty-wrap">
+        <button class="qty-btn" onclick="changeQty(${i},-1)">−</button>
+        <input class="qty-val" type="number" min="0" value="${qtys[i]||0}" id="qty_${i}" oninput="setQty(${i},this.value)">
+        <button class="qty-btn" onclick="changeQty(${i},1)">+</button>
+      </div>`;
+    list.appendChild(div);
+  });
+  updateSummary();
+}
+function changeQty(i,delta){qtys[i]=Math.max(0,(qtys[i]||0)+delta);const el=document.getElementById('qty_'+i);if(el)el.value=qtys[i];updateSummary();}
+function setQty(i,v){qtys[i]=Math.max(0,parseInt(v)||0);updateSummary();}
+function updateSummary(){
+  if(!myLevel)return;
+  const agentLevel=document.getElementById('agentLevelSel').value;
+  let rev=0,cost=0,profit=0;
+  PRODUCTS.forEach((p,i)=>{
+    const qty=qtys[i]||0;
+    const myCost=COSTS[myLevel]?.[i]??0;
+    const salePrice=saleType==='retail'?p.retail:(COSTS[agentLevel]?.[i]??0);
+    rev+=salePrice*qty;cost+=myCost*qty;profit+=(salePrice-myCost)*qty;
+  });
+  customSales.forEach(r=>{
+    rev+=r.salePrice;cost+=r.myCost;profit+=(r.salePrice-r.myCost);
+  });
+  extraCosts.forEach(r=>{
+    cost+=r.amount;profit-=r.amount;
+  });
+  document.getElementById('dRevenue').textContent='$'+rev.toLocaleString();
+  document.getElementById('dCost').textContent='$'+cost.toLocaleString();
+  const dp=document.getElementById('dProfit');dp.textContent='$'+profit.toLocaleString();dp.className='metric-val'+(profit>=0?' green':' red');
+}
+function saveRecord(){
+  if(!myLevel){alert('請先設定級別');return;}
+  // Show confirm summary first
+  const hasItems=qtys.some(q=>q>0)||customSales.some(r=>r.name||r.salePrice)||extraCosts.some(r=>r.name||r.amount);
+  if(!hasItems){alert('請輸入至少一項銷售數量或成本');return;}
+  const _d=document.getElementById('saleDate').value||new Date().toISOString().slice(0,10);
+  if(!confirm('確認儲存 '+_d+' 的銷售記錄？'))return;
+  const now=new Date();
+  const pad=n=>String(n).padStart(2,'0');
+  const dateStr=document.getElementById('saleDate').value||now.toISOString().slice(0,10);
+  const timeStr=pad(now.getHours())+':'+pad(now.getMinutes())+':'+pad(now.getSeconds());
+  const date=dateStr+' '+timeStr;
+  const agentLevel=document.getElementById('agentLevelSel').value;
+  const agentName=saleType==='agent'?document.getElementById('agentName').value.trim():'';
+  const agentRemark=saleType==='agent'?document.getElementById('agentRemark').value.trim():'';
+  let items=[],rev=0,cost=0,profit=0;
+  PRODUCTS.forEach((p,i)=>{
+    const qty=qtys[i]||0;if(!qty)return;
+    const myCost=COSTS[myLevel]?.[i]??0;
+    const salePrice=saleType==='retail'?p.retail:(COSTS[agentLevel]?.[i]??0);
+    const profitPer=salePrice-myCost;
+    items.push({name:p.name,qty,salePrice,myCost,profitPer,sub:profitPer*qty,type:'product'});
+    rev+=salePrice*qty;cost+=myCost*qty;profit+=profitPer*qty;
+  });
+  customSales.forEach(r=>{
+    if(!r.name&&!r.salePrice)return;
+    const profitPer=r.salePrice-r.myCost;
+    items.push({name:r.name||'其他銷售',qty:1,salePrice:r.salePrice,myCost:r.myCost,profitPer,sub:profitPer,type:'custom'});
+    rev+=r.salePrice;cost+=r.myCost;profit+=profitPer;
+  });
+  const savedExtraCosts=extraCosts.filter(r=>r.name||r.amount).map(r=>({name:r.name||'其他成本',amount:r.amount}));
+  const totalExtraCost=savedExtraCosts.reduce((s,r)=>s+r.amount,0);
+  cost+=totalExtraCost;profit-=totalExtraCost;
+  if(!items.length&&!savedExtraCosts.length)return;
+  const recId=Date.now()+'_'+Math.random().toString(36).slice(2,7);
+  records.push({id:recId,date,level:myLevel,type:saleType,agentLevel:agentLevel||null,agentName,agentRemark,items,extraCosts:savedExtraCosts,rev,cost,profit});
+  saveLocal();
+  syncToCloud();
+  // Reset all quantities
+  qtys=new Array(PRODUCTS.length).fill(0);
+  customSales=[];extraCosts=[];
+  // Rebuild product list DOM from scratch (uses zeroed qtys array)
+  renderProducts();
+  renderCustomSales();
+  renderExtraCosts();
+  if(saleType==='agent'){
+    document.getElementById('agentName').value='';
+    document.getElementById('agentRemark').value='';
+  }
+  document.getElementById('saleDate').value=new Date().toISOString().slice(0,10);
+  alert('✓ 記錄已儲存！可繼續輸入下一筆');
+}
+
+function initMonthSelect(keepMonth){
+  const months=[...new Set(records.filter(r=>!myLevel||r.level===myLevel).map(r=>r.date.slice(0,7)))].sort().reverse();
+  const sel=document.getElementById('monthSel');
+  const cur=keepMonth||sel.value;
+  sel.innerHTML='';
+  if(!months.length){const o=document.createElement('option');o.textContent='無記錄';sel.appendChild(o);return;}
+  months.forEach(m=>{const o=document.createElement('option');o.value=m;o.textContent=m;sel.appendChild(o);});
+  if(cur&&months.includes(cur))sel.value=cur;
+  else if(months.length)sel.value=months[0];
+}
+function renderMonthly(){
+  const m=document.getElementById('monthSel').value;
+  const container=document.getElementById('monthRecords');
+  if(!m||!myLevel){container.innerHTML='<div class="empty-state"><p>請先選擇級別</p></div>';return;}
+  const recs=records.filter(r=>r.date.startsWith(m)&&r.level===myLevel);
+  if(!recs.length){
+    container.innerHTML='<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h8M8 18h5"/></svg><p>本月尚無銷售記錄</p></div>';
+    ['mRevenue','mCost','mProfit'].forEach(id=>document.getElementById(id).textContent='$0');
+    document.getElementById('mProfit').className='metric-val green';return;
+  }
+  let mRev=0,mCost=0,mProfit=0;
+  recs.forEach(r=>{mRev+=r.rev;mCost+=r.cost;mProfit+=r.profit;});
+  document.getElementById('mRevenue').textContent='$'+mRev.toLocaleString();
+  document.getElementById('mCost').textContent='$'+mCost.toLocaleString();
+  const mp=document.getElementById('mProfit');mp.textContent='$'+mProfit.toLocaleString();mp.className='metric-val'+(mProfit>=0?' green':' red');
+  let html='';
+  // Build index map from filtered recs to real records array index
+  const recIndexMap=new Map();
+  recs.forEach(r=>recIndexMap.set(r,records.indexOf(r)));
+
+  [...recs].reverse().forEach(r=>{
+    const rId=recIndexMap.get(r);
+    const badge=r.type==='retail'?'<span class="badge badge-retail">零售</span>':'<span class="badge badge-agent">代理</span>';
+    let ai='';
+    if(r.type==='agent'&&(r.agentName||r.agentLevel||r.agentRemark)){
+      ai='<div class="record-agent">';
+      if(r.agentName)ai+=`<span class="ra-name">${r.agentName}</span>`;
+      if(r.agentLevel)ai+=`${r.agentName?' · ':''}${r.agentLevel}`;
+      if(r.agentRemark)ai+=`<br><span style="font-style:italic">${r.agentRemark}</span>`;
+      ai+='</div>';
+    }
+    let ih='';
+    r.items.forEach(item=>{
+      const tag=item.type==='custom'?`<span class="cost-badge" style="background:rgba(129,140,248,0.12);color:#818cf8;border-color:rgba(129,140,248,0.25);margin-left:4px">自訂</span>`:'';
+      ih+=`<div class="record-item-row"><span>${item.name}${tag} × ${item.qty}</span><span><span style="font-size:11px;color:var(--text3)">淨$${item.profitPer.toLocaleString()}</span>　<strong style="color:${item.sub>=0?'var(--g2)':'var(--r1)'}">$${item.sub.toLocaleString()}</strong></span></div>`;
+    });
+    if(r.extraCosts&&r.extraCosts.length){
+      r.extraCosts.forEach(ec=>{
+        ih+=`<div class="record-item-row"><span>${ec.name} <span class="cost-badge">支出</span></span><span><strong style="color:var(--r1)">−$${ec.amount.toLocaleString()}</strong></span></div>`;
+      });
+    }
+    html+=`<div class="record-card"><div class="record-header"><div class="record-date">${r.date||''}</div><div class="record-meta">${badge}<button class="del-btn" onclick="deleteRecord(${rId})">刪除</button></div></div>${ai}<div class="record-items">${ih}</div><div class="record-totals"><div class="rt-item"><div class="rt-label">營業額</div><div class="rt-val">$${r.rev.toLocaleString()}</div></div><div class="rt-item"><div class="rt-label">成本</div><div class="rt-val">$${r.cost.toLocaleString()}</div></div><div class="rt-item"><div class="rt-label">淨利</div><div class="rt-val ${r.profit>=0?'green':'red'}">$${r.profit.toLocaleString()}</div></div></div></div>`;
+  });
+  container.innerHTML=html;
+}
+function deleteRecord(idx){
+  idx=Number(idx);
+  if(!confirm('確定刪除此筆記錄？'))return;
+  if(isNaN(idx)||idx<0||idx>=records.length){alert('刪除失敗，請重新整理後再試');return;}
+  records.splice(idx,1);
+  saveLocal();
+  syncToCloud();
+  const curMonth=document.getElementById('monthSel').value;
+  initMonthSelect(curMonth);
+  renderMonthly();
+}
+
+function initStatMonthSel(){
+  const months=[...new Set(records.filter(r=>!myLevel||r.level===myLevel).map(r=>r.date.slice(0,7)))].sort().reverse();
+  const sel=document.getElementById('statMonthSel');const cur=sel.value;sel.innerHTML='';
+  const ao=document.createElement('option');ao.value='all';ao.textContent='全部月份';sel.appendChild(ao);
+  months.forEach(m=>{const o=document.createElement('option');o.value=m;o.textContent=m;sel.appendChild(o);});
+  if(cur&&(cur==='all'||months.includes(cur)))sel.value=cur;
+}
+function setSort(s){
+  statSort=s;
+  document.querySelectorAll('#sortSeg .seg-btn').forEach((b,i)=>b.className='seg-btn'+(['qty','profit'][i]===s?' active':''));
+  renderStats();
+}
+function setFilter(f){
+  statFilter=f;
+  document.querySelectorAll('#filterSeg .seg-btn').forEach((b,i)=>b.className='seg-btn'+(['all','retail','agent'][i]===f?' active':''));
+  renderStats();
+}
+function renderStats(){
+  if(!myLevel){document.getElementById('statList').innerHTML='<div class="empty-state"><p>請先選擇級別</p></div>';return;}
+  const m=document.getElementById('statMonthSel').value;
+  let recs=records.filter(r=>r.level===myLevel);
+  if(m&&m!=='all')recs=recs.filter(r=>r.date.startsWith(m));
+  if(statFilter!=='all')recs=recs.filter(r=>r.type===statFilter);
+  if(!recs.length){
+    document.getElementById('statList').innerHTML='<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg><p>此期間無銷售記錄</p></div>';
+    ['stItems','stQty'].forEach(id=>document.getElementById(id).textContent='0');
+    document.getElementById('stTop').textContent='—';document.getElementById('stProfit').textContent='$0';return;
+  }
+  const map={};
+  recs.forEach(r=>{r.items.forEach(item=>{if(!map[item.name])map[item.name]={name:item.name,qty:0,profit:0,revenue:0,retailQty:0,agentQty:0};map[item.name].qty+=item.qty;map[item.name].profit+=item.sub;map[item.name].revenue+=item.salePrice*item.qty;if(r.type==='retail')map[item.name].retailQty+=item.qty;else map[item.name].agentQty+=item.qty;});});
+  const data=Object.values(map).filter(d=>d.qty>0);
+  data.sort((a,b)=>statSort==='qty'?(b.qty-a.qty):(b.profit-a.profit));
+  const maxQty=Math.max(...data.map(d=>d.qty));
+  const maxProfit=Math.max(...data.map(d=>Math.max(d.profit,0)));
+  const totalQty=data.reduce((s,d)=>s+d.qty,0);
+  const totalProfit=data.reduce((s,d)=>s+d.profit,0);
+  document.getElementById('stItems').textContent=data.length;
+  document.getElementById('stQty').textContent=totalQty.toLocaleString();
+  document.getElementById('stTop').textContent=data[0]?.name||'—';
+  const sp=document.getElementById('stProfit');sp.textContent='$'+totalProfit.toLocaleString();sp.className='metric-val'+(totalProfit>=0?' green':' red');
+  let html='';
+  data.forEach((d,i)=>{
+    const rank=i+1;
+    const rc=rank===1?'r1':rank===2?'r2':rank===3?'r3':'rn';
+    const qPct=maxQty>0?Math.round(d.qty/maxQty*100):0;
+    const pPct=maxProfit>0?Math.max(0,Math.round(d.profit/maxProfit*100)):0;
+    const sharePct=totalQty>0?Math.round(d.qty/totalQty*100):0;
+    const typeHint=statFilter==='all'?`零售 ${d.retailQty} 件・代理 ${d.agentQty} 件`:`佔比 ${sharePct}%・營業額 $${d.revenue.toLocaleString()}`;
+    html+=`<div class="pitem">
+      <div class="prank ${rc}">${rank===1?'★':rank}</div>
+      <div class="pinfo">
+        <div class="pname">${d.name}</div>
+        <div class="pdetail">${typeHint}</div>
+        <div class="bar-wrap"><div class="${statSort==='qty'?'bar-qty':'bar-profit'}" style="width:${statSort==='qty'?qPct:pPct}%"></div></div>
+      </div>
+      <div class="pnums">
+        <div class="pqty">${d.qty.toLocaleString()}<span class="pqty-u"> 件</span></div>
+        <div class="pprofit ${d.profit>=0?'pos':'neg'}">淨 $${d.profit.toLocaleString()}</div>
+      </div>
+    </div>`;
+  });
+  document.getElementById('statList').innerHTML=html;
+}
+
+function csvEscape(v){const s=String(v===null||v===undefined?'':v);if(s.includes(',')||s.includes('"')||s.includes('\n'))return '"'+s.replace(/"/g,'""')+'"';return s;}
+function exportCSV(){
+  if(!myLevel){alert('請先選擇級別');return;}
+  const scope=document.getElementById('csvScope').value;
+  const monthVal=document.getElementById('monthSel').value;
+  let target=records.filter(r=>r.level===myLevel);
+  if(scope==='month'&&monthVal)target=target.filter(r=>r.date.startsWith(monthVal));
+  if(!target.length){alert('此範圍內無記錄可匯出');return;}
+  const headers=['日期','我的級別','銷售類型','代理姓名','叫貨級別','備註','產品名稱','數量','售價','我的成本','淨利/件','小計淨利','當筆總營業額','當筆總成本','當筆總淨利'];
+  const rows=[headers];
+  target.forEach(r=>{r.items.forEach((item,ii)=>{rows.push([r.date,r.level,r.type==='retail'?'零售':'代理銷售',r.agentName||'',r.agentLevel||'',r.agentRemark||'',item.name,item.qty,item.salePrice,item.myCost,item.profitPer,item.sub,ii===0?r.rev:'',ii===0?r.cost:'',ii===0?r.profit:'']);});});
+  const csv='\uFEFF'+rows.map(r=>r.map(csvEscape).join(',')).join('\r\n');
+  const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;a.download=scope==='month'&&monthVal?`淨利表_${myLevel}_${monthVal}.csv`:`淨利表_${myLevel}_全部.csv`;
+  a.click();URL.revokeObjectURL(url);
+}
+function togglePanel(id){
+  const panel=document.getElementById(id);
+  const isOpen=panel.classList.contains('open');
+  // close all
+  document.querySelectorAll('.settings-panel').forEach(p=>p.classList.remove('open'));
+  document.querySelectorAll('.si-arrow[id^="arrow"]').forEach(a=>{a.textContent='›';a.style.transform='';});
+  if(!isOpen){
+    panel.classList.add('open');
+    const key=id.replace('panel','arrow');
+    const arr=document.getElementById(key);
+    if(arr){arr.textContent='›';arr.style.transform='rotate(90deg)';}
+  }
+}
+
+function saveGasUrl(){
+  const url=document.getElementById('gasUrlInput').value.trim();
+  if(!url){alert('請輸入網址');return;}
+  localStorage.setItem('gasUrl',url);
+  updateGasUrlDesc();
+  togglePanel('');
+  alert('✓ Google 雲端已設定！');
+}
+function updateGasUrlDesc(){
+  const el=document.getElementById('gasUrlDesc');
+  const url=getGasUrl();
+  if(el)el.textContent=url?'已連線 ✓':'尚未設定';
+  const inp=document.getElementById('gasUrlInput');
+  if(inp&&url)inp.value=url;
+}
+
+function saveTeamPw(){
+  const pw=document.getElementById('newPwInput').value.trim();
+  if(!pw){alert('請輸入密碼');return;}
+  localStorage.setItem('dbg_team_pw',pw);
+  document.getElementById('curPwShow').textContent=pw;
+  document.getElementById('newPwInput').value='';
+  alert('✓ 密碼已儲存');
+}
+function clearAllData(){if(!confirm('確定要清除所有記錄？此動作無法復原。'))return;records=[];saveLocal();alert('已清除所有記錄');}
+
+function logout(){
+  if(!confirm('確定要登出並切換使用者？'))return;
+  localStorage.removeItem('userName');
+  localStorage.removeItem('myLevel');
+  myLevel=null;loginSelectedLevel=null;
+  document.getElementById('app').style.display='none';
+  const ls=document.getElementById('loginScreen');
+  ls.classList.remove('hide');ls.style.display='flex';
+  document.getElementById('loginName').value='';
+  document.getElementById('loginStep1').style.display='block';
+  document.getElementById('loginStep2').style.display='none';
+  document.getElementById('loginStep2Err').textContent='';
+  setTimeout(()=>document.getElementById('loginName').focus(),300);
+}
+/* ── Shared storage helpers (team) ── */
+/* ── Cloud storage via Firebase Realtime Database ──
+   Free public DB. Path: /teams/{teamCode}/members/{name_month}.json
+   Team data is publicly readable by URL (secured by obscure teamCode).
+*/
+/* ── Cloud sync via JSONBlob (free, no signup) ──
+   Google Apps Script as backend. Set GAS_URL to your deployed script URL.
+*/
+
+// 皇家建立團隊後，在設定頁貼入 Google Apps Script 網址
+function getGasUrl(){return localStorage.getItem('gasUrl')||'';}
+
+async function gasCall(params){
+  const url=getGasUrl();
+  if(!url)return null;
+  try{
+    const r=await fetch(url,{
+      method:'POST',
+      headers:{'Content-Type':'text/plain'},
+      body:JSON.stringify(params)
+    });
+    if(!r.ok)return null;
+    return await r.json();
+  }catch(e){return null;}
+}
+
+async function gasGet(teamCode){
+  const url=getGasUrl();
+  if(!url)return null;
+  try{
+    const r=await fetch(url+'?action=get&teamCode='+encodeURIComponent(teamCode));
+    if(!r.ok)return null;
+    return await r.json();
+  }catch(e){return null;}
+}
+
+async function cloudCreate(teamCode){
+  const res=await gasCall({action:'create',teamCode});
+  return res&&res.ok?teamCode:null;
+}
+
+async function cloudGet(teamCode){
+  const res=await gasGet(teamCode);
+  return res||{members:{}};
+}
+
+async function cloudSetMember(teamCode,memberKey,payload){
+  const safeKey=memberKey.replace(/[^a-zA-Z0-9一-鿿_]/g,'_');
+  const res=await gasCall({action:'set',teamCode,memberKey:safeKey,payload});
+  return res&&res.ok;
+}
+
+async function cloudSet(teamCode,data){return true;}
+function getBinId(teamCode){return getGasUrl()?teamCode:'';}
+function setBinId(teamCode,id){}
+function getApiKey(teamCode){return '';}
+function setApiKey(teamCode,key){}
+
+let loginSelectedLevel=null;
+
+function initLoginLevelGrid(){
+  const g=document.getElementById('loginLevelGrid');if(!g)return;g.innerHTML='';
+  const labels={'皇家':'皇家版','一級':'一級版','二級':'二級版','三級輔導督導':'三級輔導督導版','三級零售':'三級零售版'};
+  Object.entries(labels).forEach(([l,label])=>{
+    const d=document.createElement('div');
+    d.className='login-level-btn'+(loginSelectedLevel===l?' active':'');
+    d.innerHTML=`<div>${label}</div><div class="lsub">${l}</div>`;
+    d.onclick=()=>{loginSelectedLevel=l;initLoginLevelGrid();document.getElementById('loginErrMsg').textContent='';};
+    g.appendChild(d);
+  });
+}
+
+function doLogin(){
+  const name=document.getElementById('loginName').value.trim();
+  const errEl=document.getElementById('loginErrMsg');
+  if(!name){errEl.textContent='請輸入姓名';return;}
+  if(!loginSelectedLevel){errEl.textContent='請選擇級別';return;}
+  errEl.textContent='';
+  localStorage.setItem('userName',name);
+  localStorage.setItem('myLevel',loginSelectedLevel);
+  myLevel=loginSelectedLevel;
+  buildAgentLevelOptions();renderProducts();initLevels();
+  enterApp(name);
+}
+
+function enterApp(name){
+  const ls=document.getElementById('loginScreen');ls.classList.add('hide');
+  setTimeout(()=>ls.style.display='none',480);
+  document.getElementById('topSub').textContent='✦ '+LEVEL_LABELS[myLevel]+' · '+name;
+  document.getElementById('app').style.display='flex';
+}
+document.getElementById('loginName').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();});
+document.getElementById('loginName').addEventListener('input',()=>{
+  document.getElementById('loginName').style.borderColor='';
+  document.getElementById('loginErrMsg').textContent='';
+});
+
+// Stars
+(function(){
+  const c=document.getElementById('starsContainer');
+  for(let i=0;i<32;i++){
+    const s=document.createElement('div');s.className='star';
+    const sz=Math.random()*2.8+0.8;
+    s.style.cssText=`width:${sz}px;height:${sz}px;top:${Math.random()*100}%;left:${Math.random()*100}%;animation:twinkle ${2+Math.random()*3.5}s ${Math.random()*4}s infinite`;
+    c.appendChild(s);
+  }
+})();
+
+// Init
+document.getElementById('saleDate').value=new Date().toISOString().slice(0,10);
+ensureIds();
+const savedName=localStorage.getItem('userName');
+if(myLevel){buildAgentLevelOptions();renderProducts();}
+initLevels();
+initLoginLevelGrid();
+if(savedName) loginSelectedLevel=myLevel;
+document.getElementById('nav-settings').classList.add('active');
+document.getElementById('app').style.display='none';
+if(savedName&&myLevel){
+  document.getElementById('loginScreen').style.display='none';
+  document.getElementById('app').style.display='flex';
+  document.getElementById('topSub').textContent='✦ '+LEVEL_LABELS[myLevel]+' · '+savedName;
+}
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}
+// Show current pw in settings
+const _curPwEl=document.getElementById('curPwShow');
+if(_curPwEl){
+  const _pw=localStorage.getItem('dbg_team_pw');
+  _curPwEl.textContent=_pw||'（未設定）';
+}
+</script>
+</body>
+</html>
